@@ -14,14 +14,56 @@
   </header>
   <p>First JS practices</p>
   <section>
-    <h2>Calculate</h2>
+    <h2>Calculate perimeter and area of a square</h2>
     <form action="">
-      <label for="inputCuadrado">
-        write the the dims of your square:
-      </label>
+      <!-- <label for="inputCuadrado">
+        write the length of every surface of your square:
+      </label> -->
       <input id="inputCuadrado" type="number" />
       <button type="button" onclick="calcularPerimetroCuadrado()">Perimetro</button>
-      <button type="button" onclick="calcularArea()">Calcular el area</button>
+      <button type="button" onclick="calcularAreacuadrado()">Calcular el area</button>
+    </form>
+    <hr style="padding-top: 10px; margin-top: 10px;">
+  </section>
+
+  <section>
+    <h2>Calculate perimeter and area of a triangle</h2>
+
+    <form action="">
+      <label for="lado1">
+        lado1
+      </label>
+      <input id="lado1" type="number" placeholder="lado 1" />
+
+      <label for="lado2">
+        lado2
+      </label>
+      <input id="lado2" type="number" placeholder="lado 2" />
+
+      <label for="base">
+        base
+      </label>
+      <input id="base" type="number" placeholder="base" />
+
+      <label for="altura">
+        altura
+      </label>
+      <input id="altura" type="number" placeholder="altura" />
+
+      <button type="button" onclick="calcularPerimetroTriangulo()">Perimetro Triangulo</button>
+      <button type="button" onclick="calcularAreaTriangulo()">area Triangulo</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Calculate perimeter and area of a circle</h2>
+
+    <form action="">
+      <label for="RadioCirculo">Ingresa el radio del circulo</label>
+      <input type="number" id="RadioCirculo">
+      <button type="button" onclick="PerimetroCirculo()">Calvular el perimetro del circulo</button>
+      <button type="button" onclick="AreaCirculo()">Calvular el area del circulo</button>
+      <button type="button" onclick="DiametroCriculo()">Calvular el diametro del circulo</button>
     </form>
   </section>
   <script src="./script.js"></script>
