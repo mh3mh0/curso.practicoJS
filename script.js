@@ -153,3 +153,17 @@ function DiametroCriculo() {
   alert(" el diametro del circulo es: " + diametroC);
 }
 //circulo
+
+//isosceles
+
+function alturaT(ladoA, ladoB, baseC) {
+  if (ladoA === ladoB && ladoA != baseC) {
+    alert("isosceles");
+    const altura = Math.sqrt(ladoA ** 2 - baseC ** 2 / 4);
+    console.log(altura);
+  } else {
+    alert("no lo se");
+  }
+}
+// alturaT(6, 6, 4);
+//isosceles
