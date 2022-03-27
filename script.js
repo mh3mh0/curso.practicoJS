@@ -19,7 +19,7 @@ function areaCuadrado(lado) {
 console.groupEnd();
 
 //Codigo del triangulo
-console.group("triangulos");
+
 // const ladoTriangulo1 = 6;
 // const ladoTriangulo2 = 6;
 // const baseTriangulo = 4;
@@ -46,10 +46,9 @@ console.group("triangulos");
 // function areaTriangulo(base, altura) {
 //   return (base * altura) / 2;
 // }
-console.groupEnd();
 
 //codigo circulo
-console.group("circulo");
+
 //radio
 // const radioCirculo = 4;
 // console.log("el radio del circulo es: " + radioCirculo + " cms");
@@ -79,7 +78,6 @@ console.group("circulo");
 // function areaCirculo(radio) {
 //   return radio * radio * PI;
 // }
-console.groupEnd();
 
 //interactuando con HTML
 //cuadrado
@@ -100,6 +98,8 @@ function calcularAreacuadrado() {
 //cuadrado
 
 //triangulo
+console.group("triangulo2");
+
 function perimetroTriangulo(lado1, lado2, base) {
   return parseFloat(lado1) + parseFloat(lado2) + parseFloat(base);
 }
@@ -131,9 +131,25 @@ function calcularAreaTriangulo() {
   const area = areaTriangulo(valueBase, valueAltura);
   alert(area);
 }
+//isosceles
+function alturaTrianguloIsosceles(lado1, lado2, base) {
+  if (lado1 == lado2 && lado1 != base) {
+    alert("es isosceles");
+    const cateto = (base / 2) ** 2;
+    const hipotenusa = lado1 ** 2;
+    const altura = Math.sqrt(hipotenusa - cateto);
+    alert("la altura es de " + altura);
+  } else {
+    alert("no es isos");
+  }
+}
+alturaTrianguloIsosceles(7, 7, 9);
+//isosceles
+console.groupEnd();
 //triangulo
 
 //circulo
+console.group("circulo");
 function PerimetroCirculo() {
   var radio = document.getElementById("RadioCirculo");
   var pi = Math.PI;
@@ -152,18 +168,5 @@ function DiametroCriculo() {
   var diametroC = parseInt(RadioCirculo.value) * 2;
   alert(" el diametro del circulo es: " + diametroC);
 }
+console.groupEnd();
 //circulo
-
-//isosceles
-
-function alturaT(ladoA, ladoB, baseC) {
-  if (ladoA === ladoB && ladoA != baseC) {
-    alert("isosceles");
-    const altura = Math.sqrt(ladoA ** 2 - baseC ** 2 / 4);
-    console.log(altura);
-  } else {
-    alert("no lo se");
-  }
-}
-// alturaT(6, 6, 4);
-//isosceles
